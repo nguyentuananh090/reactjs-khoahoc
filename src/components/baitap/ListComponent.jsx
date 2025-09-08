@@ -6,8 +6,8 @@ const ListComponent = (props) => {
             {dataList.map((item,index) => {
                 return (
                 <>
-                    <li className="dataItem" key={index}>
-                        <div>{item.name} - {item.age} - {item.address}</div>
+                    <li className="dataItem" key={item.id}>
+                        <div className="dataTitle">{item.id} - {item.name}</div>
                         <button>Delete</button>
                     </li>
                 </>

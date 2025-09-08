@@ -6,12 +6,9 @@ import ListData from "./components/baitap/ListComponent"
 import { useState } from "react";
 function App() {
   
-  const [dataList, setDataList] = useState([
-    {id:1, name: "Hoài Đạt", age: 25, address: "Hà Nội" },
-    {id:2, name: "Hoài tuấn anh", age: 21, address: "Hà Nội" }
-  ]);
+  const [dataList, setDataList] = useState([]);
   const addNewFunc=(name)=>{
-    let newData = { id: dataList.length + 1, name: name, age: 11, address: "Hà Nội" }
+    let newData = { id: dataList.length + 1, name: name }
     setDataList([...dataList,newData])
   }
  
