@@ -1,6 +1,9 @@
 const ListComponent = (props) => {
-    const {dataList} = props;
-    console.log("data",dataList);
+    const { dataList, deleteFunc } = props;
+    
+    function handleDelete(id){
+        deleteFunc(id);
+    }
     return (
         <ul>
             {dataList.map((item,index) => {
@@ -9,7 +12,10 @@ const ListComponent = (props) => {
                 {item.name!='' &&
                     <li className="dataItem" key={item.id}>
                         <div className="dataTitle">{item.id} - {item.name}</div>
-                        <button>Delete</button>
+                        <button
+                        onClick={() => handleDelete(item.id)}
+                        style={{cursor:'pointer'}}
+                        >Delete</button>
                     </li>
                 }
                 </>
