@@ -4,7 +4,9 @@ const AddData=(props)=>{
     const {addNewFunc} = props;
     // addNewFunc("TA");
     const handleClick=()=>{
-        console.log("Click handleClick: ",ValueInput);
+        addNewFunc(ValueInput);
+        setValueInput('');
+
     }
     // const handleOnChange=(event)=>{
     //     console.log("Click handleOnChange",event.target.value); 

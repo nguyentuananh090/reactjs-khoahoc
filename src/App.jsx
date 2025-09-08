@@ -19,13 +19,16 @@ function App() {
           address: "Hà Nội"
         }
     ];
-  const addNewFunc=(name)=>{
-    alert(`Thêm mới thành công: ${name}`); 
-  }
+  
   const [dataList, setDataList] = useState([
     { name: "Hoài Đạt", age: 25, address: "Hà Nội" },
     { name: "Hoài tuấn anh", age: 21, address: "Hà Nội" }
   ]);
+  const addNewFunc=(name)=>{
+    let newData={name:name,age:11,address:"Hà Nội"}
+    setDataList([...dataList,newData])
+  }
+ 
   return (
     <>
       <div className="box">
