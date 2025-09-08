@@ -18,7 +18,7 @@ function App() {
  
   return (
     <>
-      <div className="box">
+      {/* <div className="box">
         <div className="title">Todo list</div>
         <AddData
           addNewFunc={addNewFunc}
@@ -27,6 +27,21 @@ function App() {
           dataList={dataList}
         />
         {dataList.length === 0 && 
+        <ImgComponent/>
+        }
+        <img src={logo_react}/>
+      </div> */}
+
+      <div className="box">
+        <div className="title">Todo list</div>
+        <AddData
+          addNewFunc={addNewFunc}
+        />
+        {dataList.length > 0 ?
+        <ListData
+          dataList={dataList}
+        />
+        : 
         <ImgComponent/>
         }
         <img src={logo_react}/>
