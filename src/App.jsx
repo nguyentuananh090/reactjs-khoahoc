@@ -17,16 +17,22 @@ function App() {
           age: 21,
           address: "Hà Nội"
         }
-    ]
+    ];
+  const addNewFunc=(name)=>{
+    alert(`Thêm mới thành công: ${name}`); 
+  }
+  
   return (
     <>
       <div className="box">
         <div className="title">Todo list</div>
-        <AddData/>
+        <AddData
+          addNewFunc={addNewFunc}
+        />
         <ListData
-        name={name}
-        age={age}
-        data={data}
+          name={name}
+          age={age}
+          data={data}
         />
         <ImgComponent/>
         <img src={logo_react}/>

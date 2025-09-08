@@ -1,10 +1,12 @@
-const AddData=()=>{
+const AddData=(props)=>{
+    const {addNewFunc} = props;
+    addNewFunc("TA")
     return (
         <>
-        <form className="form-todo">
+        <div className="form-todo">
           <input type="text" name="name" />
           <input type="submit" value="Submit" />
-        </form>
+        </div>
         </>
     )
 }

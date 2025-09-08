@@ -40,7 +40,7 @@
     margin-top: 20px;
 
 }
-form.form-todo input[type="text"] {
+.form-todo input[type="text"] {
     border: none;
     background: #dde8f1;
     padding: 10px;
@@ -48,7 +48,7 @@ form.form-todo input[type="text"] {
     margin-right: 5px;
     width: 60%;
 }
-form.form-todo input[type="submit"] {
+.form-todo input[type="submit"] {
     border: none;
     background: #2196F3;
     padding: 10px;
