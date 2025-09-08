@@ -8,6 +8,10 @@ function App() {
   
   const [dataList, setDataList] = useState([]);
   const addNewFunc=(name)=>{
+    if(name===''){
+      alert("Vui lòng nhập name");
+      return;
+    }
     let newData = { id: dataList.length + 1, name: name }
     setDataList([...dataList,newData])
   }
@@ -22,7 +26,9 @@ function App() {
         <ListData
           dataList={dataList}
         />
+        {dataList.length === 0 && 
         <ImgComponent/>
+        }
         <img src={logo_react}/>
       </div>
     </>

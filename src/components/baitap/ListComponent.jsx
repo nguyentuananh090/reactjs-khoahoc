@@ -6,10 +6,12 @@ const ListComponent = (props) => {
             {dataList.map((item,index) => {
                 return (
                 <>
+                {item.name!='' &&
                     <li className="dataItem" key={item.id}>
                         <div className="dataTitle">{item.id} - {item.name}</div>
                         <button>Delete</button>
                     </li>
+                }
                 </>
                 )
             })}
