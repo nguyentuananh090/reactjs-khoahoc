@@ -1,4 +1,6 @@
-import "./header.css"
+import "./header.css";
+import {Link, NavLink } from "react-router-dom";
+
 const Header=()=>{
     return (
         <>
@@ -9,11 +11,11 @@ const Header=()=>{
 
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/products">Products <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/users">Users</a></li>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="/products">Products <i class="fas fa-chevron-down"></i></NavLink></li>
+                    <li><NavLink to="/login">Login</NavLink></li>
+                    <li><NavLink to="/register">Register</NavLink></li>
+                    <li><NavLink to="/users">Users</NavLink></li>
                 </ul>
             </nav>
 

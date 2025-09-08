@@ -20,26 +20,12 @@ function App() {
   const deleteFunc = (id) => {
     const currentData = dataList.filter(item => item.id !== id);
     setDataList(currentData);
-    // console.log('currentData id: ', currentData);
   }
   return (
     <>
       <Header/>
       <Outlet/>
-      {/* <div className="box">
-        <div className="title">Todo list</div>
-        <AddData
-          addNewFunc={addNewFunc}
-        />
-        <ListData
-          dataList={dataList}
-        />
-        {dataList.length === 0 && 
-        <ImgComponent/>
-        }
-        <img src={logo_react}/>
-      </div> */}
-
+      
       <div className="box">
         <div className="title">Todo list</div>
         <AddData
