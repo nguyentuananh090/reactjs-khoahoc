@@ -1,16 +1,18 @@
 const ListComponent = (props) => {
-    // console.log("props",props);
-
-    const {name,age,data,dataList} = props;
-    // console.log("name",name);
-    // console.log("age",age);
-    // console.log("data",data);
+    const {dataList} = props;
     console.log("data",dataList);
     return (
         <ul>
-            {dataList.map((item,index) => (
-                <li key={index}>{item.name} - {item.age} - {item.address}</li>
-            ))}
+            {dataList.map((item,index) => {
+                return (
+                <>
+                    <li className="dataItem" key={index}>
+                        <div>{item.name} - {item.age} - {item.address}</div>
+                        <button>Delete</button>
+                    </li>
+                </>
+                )
+            })}
 
         </ul>
     )
