@@ -5,6 +5,7 @@ import ListData from "./components/baitap/ListComponent"
 import { useState } from "react";
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
+import { Outlet } from "react-router-dom";
 function App() {
   
   const [dataList, setDataList] = useState([]);
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <Header/>
+      <Outlet/>
       {/* <div className="box">
         <div className="title">Todo list</div>
         <AddData

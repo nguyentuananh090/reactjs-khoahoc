@@ -13,7 +13,7 @@ const Header=()=>{
                     <li><a href="/products">Products <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/users">Users</a></li>
                 </ul>
             </nav>
 
