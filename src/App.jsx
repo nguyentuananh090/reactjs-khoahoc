@@ -1,9 +1,10 @@
-import "./App.css"
 import AddData from "./components/baitap/AddComponent"
 import ImgComponent from "./components/baitap/ImgComponent"
 import logo_react from "./assets/react.svg"
 import ListData from "./components/baitap/ListComponent"
 import { useState } from "react";
+import Header from "./layouts/header";
+import Footer from "./layouts/footer";
 function App() {
   
   const [dataList, setDataList] = useState([]);
@@ -22,6 +23,7 @@ function App() {
   }
   return (
     <>
+      <Header/>
       {/* <div className="box">
         <div className="title">Todo list</div>
         <AddData
@@ -52,6 +54,7 @@ function App() {
         }
         <img src={logo_react}/>
       </div>
+      <Footer/>
     </>
   )
 }
