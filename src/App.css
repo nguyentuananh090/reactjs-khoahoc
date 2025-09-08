@@ -17,7 +17,47 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.box {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.box .title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #b19dce;
+}
+.box .img {
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.box .img img{
+    width: 100%;
+    margin-top: 20px;
 
+}
+form.form-todo input[type="text"] {
+    border: none;
+    background: #dde8f1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 60%;
+}
+form.form-todo input[type="submit"] {
+    border: none;
+    background: #2196F3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 20%;
+    color: #fff;
+    font-weight: bold;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
