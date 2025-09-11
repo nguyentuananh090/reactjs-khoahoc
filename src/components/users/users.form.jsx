@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Input  } from 'antd';
-
+import axios from 'axios';
 
 
 const UsersForm = () =>{
@@ -9,8 +9,19 @@ const UsersForm = () =>{
     const [password,setPassword]=useState('');
     const [email,setEmail]=useState('');
     const handleClickBtn=()=>{
+        const URL_API_ADD_USER='http://localhost:8080/api/v1/user';
+        const data={
+            fullName:fullName,
+            phone:phone,
+            password:password,
+            email:email
+        }
+        axios.post(URL_API_ADD_USER,data);
+
         console.log({fullName,phone,password,email});
     }
+
+  
     return (
         <div className='form-user'>
             <div className='form-input'>
