@@ -5,7 +5,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page">
+    <div className="min-wrap" id="error-page">
         <section class="page_404">
           <div class="container">
             <div class="row">

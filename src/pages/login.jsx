@@ -1,6 +1,6 @@
 const LoginPage = () => {
     return ( 
-        <div className="login-page">    
+        <div className="min-wrap">    
             <h1>Login Page</h1>
         </div>
         );

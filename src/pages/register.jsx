@@ -1,6 +1,6 @@
 const RegisterPage = () => {
     return ( 
-        <div className="login-page">    
+        <div className="min-wrap">    
             <h1>Register Page</h1>
         </div>
         );
