@@ -1,15 +1,45 @@
 import React, { useState } from 'react';
-import { Button, Descriptions, Input, message, notification } from 'antd';
+import { Button, Descriptions, Input, message, notification,Modal } from 'antd';
 import { createUserApi } from '../../services/api_service';
 // import { JSON } from 'react-router-dom';
 
 
 const UsersForm = () => {
+
+
     const [fullName, setFullName] = useState('cds');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+   
+    const handleSubmit =async () => {
+        const res = await createUserApi(fullName, phone, password, email);
+        // debugger
+        if(res.data){
+           
+            notification.success({
+                message:"Create user",
+                description:"Tạo user thành công"
+            })
+            setIsModalOpen(false);
+            setFullName();
+            setPhone();
+            setPassword();
+            setEmail();
+        }else{
+           
+            notification.error({
+                message:"Error create user",
+                description: JSON.stringify(res.message)
+                
+            })
+        }
+       
+        
+    };
+   
     const handleClickBtn = async () => {
         const res = await createUserApi(fullName, phone, password, email);
         // debugger
@@ -28,7 +58,16 @@ const UsersForm = () => {
 
 
     return (
-        <div className='form-user'>
+        <>
+        <Modal
+            title="Basic Modal"
+            closable={{ 'aria-label': 'Custom Close Button' }}
+            open={isModalOpen}
+            onOk={handleSubmit}
+            onCancel={()=>setIsModalOpen(false)}
+        >
+
+            <div className='form-user'>
             <div className='form-input'>
                 <label htmlFor="">fullName</label>
                 <Input value={fullName} onChange={(event) => setFullName(event.target.value)} name='fullName' />
@@ -45,12 +84,14 @@ const UsersForm = () => {
                 <label htmlFor="">password</label>
                 <Input.Password value={password} onChange={(event) => setPassword(event.target.value)} name='password' />
             </div>
-            <div className='form-input'>
-                <Button
-                    onClick={() => handleClickBtn()}
-                    type='primary'>submit</Button>
-            </div>
+            
         </div>
+        </Modal>
+         <Button type="primary" onClick={()=>setIsModalOpen(true)}>
+           Tạo mới
+        </Button>
+        
+        </>
     );
 }
 export default UsersForm;
