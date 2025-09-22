@@ -1,4 +1,4 @@
-import UsersForm from "../components/users/users.form";
+import AddForm from "../components/users/users.add";
 import UsersTable from "../components/users/users.table";
 import React, { useEffect, useState } from 'react';
 import { FetchAllUsersApi } from '../services/api_service';
@@ -14,11 +14,12 @@ const UsersPage = () => {
     },[])
     return ( 
         <div className="min-wrap">    
-            <UsersForm 
+            <AddForm 
             loadUsers={loadUsers}
             
             />
             <UsersTable
+            loadUsers={loadUsers}
             dataUsers={dataUsers}
             />
         </div>

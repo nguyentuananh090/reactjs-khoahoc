@@ -4,10 +4,10 @@ import { createUserApi } from '../../services/api_service';
 // import { JSON } from 'react-router-dom';
 
 
-const UsersForm = (props) => {
+const AddForm = (props) => {
 
     const { loadUsers } = props;
-    const [fullName, setFullName] = useState('cds');
+    const [fullName, setFullName] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -44,27 +44,12 @@ const UsersForm = (props) => {
         setEmail();
     }
    
-    const handleClickBtn = async () => {
-        const res = await createUserApi(fullName, phone, password, email);
-        // debugger
-        if(res.data){
-            notification.success({
-                message:"Create user",
-                description:"Tạo user thành công"
-            })
-        }else{
-            notification.error({
-                message:"Error create user",
-                description: JSON.stringify(res.message)
-            })
-        }
-    }
-
+   
 
     return (
         <>
         <Modal
-            title="Basic Modal"
+            title="Create user"
             closable={{ 'aria-label': 'Custom Close Button' }}
             open={isModalOpen}
             onOk={handleSubmit}
@@ -98,4 +83,4 @@ const UsersForm = (props) => {
         </>
     );
 }
-export default UsersForm;
+export default AddForm;
