@@ -25,4 +25,8 @@ const updateUserApi=(_id,fullName,phone,email)=>{
     }
     return axios.put(URL_API_ADD_USER,data);
 }
-export {createUserApi,FetchAllUsersApi,updateUserApi}
+const DeleteUserApi=(_id)=>{
+    const URL_API_ADD_USER='/api/v1/user/'+_id;
+    return axios.delete(URL_API_ADD_USER);
+}
+export {createUserApi,FetchAllUsersApi,updateUserApi,DeleteUserApi}

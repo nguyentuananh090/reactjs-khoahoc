@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Descriptions, Input, message, notification,Modal } from 'antd';
+import { useState } from 'react';
+import { Button, Input, notification,Modal } from 'antd';
 import { createUserApi } from '../../services/api_service';
 // import { JSON } from 'react-router-dom';
 

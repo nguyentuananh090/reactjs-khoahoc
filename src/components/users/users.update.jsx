@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Input, notification, Modal } from 'antd';
-import { createUserApi, updateUserApi } from '../../services/api_service';
+import { useEffect, useState } from 'react';
+import {Input, notification, Modal } from 'antd';
+import { updateUserApi } from '../../services/api_service';
 // import { JSON } from 'react-router-dom';
 
 
